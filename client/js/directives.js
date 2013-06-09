@@ -5,7 +5,6 @@
 var directives = angular.module('ngLunchit.directives', []);
 
 directives.directive('menuPoint', function($location) {
-
     var checkLink = function(href, element){
         if(href.slice(2) == $location.path()){
             element.addClass('active');
@@ -27,5 +26,16 @@ directives.directive('menuPoint', function($location) {
             });
         }
 
+    }
+});
+
+directives.directive('humanDate', function(dateFilter) {
+    return {
+        link: function ($scope, element, attrs) {
+            $scope.$watch(attrs.humanDate, function(){
+                console.log(attrs.humanDate);
+                element.text(dateFilter(new Date(attrs.humanDate), 'd/M'));
+            });
+        }
     }
 });
