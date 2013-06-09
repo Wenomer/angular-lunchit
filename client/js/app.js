@@ -11,14 +11,14 @@ var app = angular.module('ngLunchit', [
 
 app.config(['$routeProvider', '$locationProvider', '$httpProvider',
     function ($routeProvider, $locationProvider, $httpProvider) {
-//        $routeProvider.when('/signup', {
-//            templateUrl : 'view/page/signup.html',
-//            controller : 'SignupPageCtrl'
-//        });
+        $routeProvider.when('/menu', {
+            templateUrl : 'view/page/menu.html'
+        });
+        $routeProvider.when('/', {
+            templateUrl : 'view/page/dashboard.html'
+        });
         $routeProvider.otherwise({
-            redirectTo : '/',
-            controller : 'IndexCtrl',
-            templateUrl: 'view/main.html'
+            redirectTo : '/'
         });
     }]);
 

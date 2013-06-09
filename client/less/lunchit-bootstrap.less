@@ -1,6 +1,14 @@
+@btnSuccess:                #b1ba61;
+@btnSuccessHighlight:       #b1ba61;
+@btnWarning:                red;
+@btnWarningHighlight:       red;
+
 .navbar{
     .navbar-inner{
+        background-color: rgba(0, 0, 0, 0.5);
+        background-image: none;
         padding: 10px 0;
+        border: 0;
     }
 
     .brand{
@@ -35,6 +43,11 @@
             }
         }
     }
+}
 
-    .opacity(60);
+.btn-warning {
+    .buttonBackground(@btnWarning, @btnWarningHighlight);
+}
+.btn-success {
+    .buttonBackground(@btnSuccess, @btnSuccessHighlight);
 }

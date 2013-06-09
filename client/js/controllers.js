@@ -4,10 +4,8 @@
 
 var controllers = angular.module('ngLunchit.controllers', []);
 
-controllers.controller('IndexCtrl', [function () {
-
-}]);
-
 controllers.controller('HeaderCtrl', ['$scope', '$location', function ($scope, $location) {
-
+    $scope.loginPopup = function(){
+        alert('popup');
+    }
 }]);
